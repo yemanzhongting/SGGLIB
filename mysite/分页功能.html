@@ -1,0 +1,15 @@
+<div class="ui small pagination menu">
+                {% if ItemInfo.has_previous %}
+                <a class="icon item" href="?page={{ ItemInfo.previous_page_number }}">
+                    <i class="left arrow icon"></i>
+                </a>
+                {% endif %}
+
+                <div class="disabled item"> {{ ItemInfo.number }} of {{ ItemInfo.paginator.num_pages }} </div>
+
+                {% if ItemInfo.has_next %}
+                <a class="icon item" href="?page={{ ItemInfo.next_page_number }}">
+                    <i class="right arrow icon"></i>
+                </a>
+                {% endif %}
+            </div>
